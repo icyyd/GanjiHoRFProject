@@ -169,18 +169,18 @@ public class Grid extends JFrame  implements ActionListener {
 				
 				public void  setlblVerticalWins()
 				{
-					gridProduct.setlblVerticalWins();
+					gridProduct.setlblVerticalWinsrf();
 				}
 				
 				public void setlblDraws()
 				{
-					gridProduct_rf.setlblDraws();
+					gridProduct_rf.setlblDrawsrf();
 				}
 				
 				//Used for resetting the counter labels
 				public void resetCounters()
 				{
-					HorizontalWins = gridProduct.setVerticalWins(gridProduct_rf.setDraws(0));
+					HorizontalWins = gridProduct.setVerticalWinsrf(gridProduct_rf.setDrawsrf(0));
 					lblHorizontalWins.setText(HorizontalWins + "");
 					gridProduct.getLblVerticalWins().setText(gridProduct.getVerticalWins() + "");
 					gridProduct_rf.getLblDraws().setText(gridProduct_rf.getDraws() + "");
@@ -290,7 +290,6 @@ public class Grid extends JFrame  implements ActionListener {
 								numberofVMoves++;
 							}
 						}
-						//System.out.println(moves);
 						return 	numberofVMoves;
 					}
 
@@ -436,12 +435,12 @@ public class Grid extends JFrame  implements ActionListener {
 								if(checkDraw())
 								{
 									 edtDebug.setText("Draw");
-									 gridProduct_rf.setlblDraws();
+									 gridProduct_rf.setlblDrawsrf();
 								}
 								else if(numberHorizontalMoves()==0)
 								 {
 									 edtDebug.setText("Vertical Won!");
-									 gridProduct.setlblVerticalWins();
+									 gridProduct.setlblVerticalWinsrf();
 								 }
 								turn = turn *-1;
 							}
@@ -459,7 +458,7 @@ public class Grid extends JFrame  implements ActionListener {
 								if(checkDraw())
 								{
 									 edtDebug.setText("Draw");
-									 gridProduct_rf.setlblDraws();
+									 gridProduct_rf.setlblDrawsrf();
 								}
 								else if(numberVerticalMoves()==0)
 								 {
@@ -1378,12 +1377,12 @@ public class Grid extends JFrame  implements ActionListener {
 						if(checkDraw())
 						{
 							 edtDebug.setText("Draw");
-							 gridProduct_rf.setlblDraws();
+							 gridProduct_rf.setlblDrawsrf();
 						}
 						else if(numberHorizontalMoves()==0)
 						 {
 							 edtDebug.setText("Vertical Won!");
-							 gridProduct.setlblVerticalWins();
+							 gridProduct.setlblVerticalWinsrf();
 						 }
 						turn=turn*-1;
 					}
@@ -1408,12 +1407,12 @@ public class Grid extends JFrame  implements ActionListener {
 						if(checkDraw())
 						{
 							 edtDebug.setText("Draw");
-							 gridProduct_rf.setlblDraws();
+							 gridProduct_rf.setlblDrawsrf();
 						}
 						else if(numberVerticalMoves()==0)
 						 {
 							 edtDebug.setText("Horizontal Won!");
-							 gridProduct.setlblVerticalWins();
+							 gridProduct.setlblVerticalWinsrf();
 						 }
 						turn=turn*-1;
 					
@@ -1440,7 +1439,7 @@ public class Grid extends JFrame  implements ActionListener {
 								if(checkDraw())
 								{
 									 edtDebug.setText("Draw");
-									 gridProduct_rf.setlblDraws();
+									 gridProduct_rf.setlblDrawsrf();
 								}
 								else if(numberVerticalMoves()==0)
 								 {
@@ -1467,12 +1466,12 @@ public class Grid extends JFrame  implements ActionListener {
 								if(checkDraw())
 								{
 									 edtDebug.setText("Draw");
-									 gridProduct_rf.setlblDraws();
+									 gridProduct_rf.setlblDrawsrf();
 								}
 								else if(numberHorizontalMoves()==0)
 								 {
 									 edtDebug.setText("Vertical Won!");
-									 gridProduct.setlblVerticalWins();
+									 gridProduct.setlblVerticalWinsrf();
 								 }
 								turn = turn *-1;
 								AInotStart();

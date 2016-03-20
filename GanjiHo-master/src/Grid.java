@@ -177,6 +177,7 @@ public class Grid extends JFrame  implements ActionListener {
 					gridProduct_rf.setlblDraws();
 				}
 				
+				//Used for resetting the counter labels
 				public void resetCounters()
 				{
 					HorizontalWins = gridProduct.setVerticalWins(gridProduct_rf.setDraws(0));
@@ -228,23 +229,6 @@ public class Grid extends JFrame  implements ActionListener {
 					}
 				}
 				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
 				public class LabelAdapter extends MouseAdapter {
 					JLabelBox sender;
 					
@@ -253,6 +237,7 @@ public class Grid extends JFrame  implements ActionListener {
 						this.sender = sender;
 					}
 					
+					//Whether vertical is allowed to place
 					public boolean canVerticalPlace(int Currentmove )
 					{
 						if(getInfo(Currentmove)=="")
@@ -262,6 +247,7 @@ public class Grid extends JFrame  implements ActionListener {
 						return false;
 					}
 					
+					//Whether horizontal is allowed to place
 					public boolean canHorizontalPlace(int Currentmove )
 					{
 						 if(getInfo(Currentmove)=="")
@@ -436,12 +422,8 @@ public class Grid extends JFrame  implements ActionListener {
 						return numberofVMoves;
 					}
 
-					
-					
-					
-					
-					
-					public void PlayerVPlayer(){
+				       
+					 public void PlayerVPlayer(){
 						
 						if(turn ==1)
 						{
@@ -515,8 +497,7 @@ public class Grid extends JFrame  implements ActionListener {
 						for(int i=1; i<=(size-Math.sqrt(size)); i++)
 						{
 							if(Label[i-1].getText()=="" && Label[(int) ((i-1)+Math.sqrt(size))].getText()=="" )
-								//nodes.Name.add(Integer.toString(Label[i-1].Field) +";"+Integer.toString(Label[(int) ((i-1)+Math.sqrt(size))].Field));
-								nodes.add(new Node(Integer.toString(Label[i-1].Field) +";"+Integer.toString(Label[(int) ((i-1)+Math.sqrt(size))].Field)));
+							nodes.add(new Node(Integer.toString(Label[i-1].Field) +";"+Integer.toString(Label[(int) ((i-1)+Math.sqrt(size))].Field)));
 						}
 						return nodes;
 						
@@ -534,7 +515,6 @@ public class Grid extends JFrame  implements ActionListener {
 								nodes.add(new Node(Integer.toString(i) +";"+Integer.toString((int) ((int)   (i)+Math.sqrt(size)))       )          );
 						}
 						return nodes;
-						//if(Label[i-1].getText()=="" && Label[(int) ((i-1)+Math.sqrt(size))].getText()=="" )
 					}
 					
 					public int vCountMovesCopy(String Copy[])

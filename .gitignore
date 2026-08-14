@@ -1,0 +1,14 @@
+# Java build output
+*.class
+bin/
+out/
+
+# IDE metadata
+.classpath
+.project
+.settings/
+.idea/
+*.iml
+
+# OS files
+.DS_Store
